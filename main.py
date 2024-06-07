@@ -1,7 +1,7 @@
 # Author 1: Grzegorz Muczyński (s27971)
 # Author 2: Hubert Mosakowski (s28829)
-
-
+import json
+import os
 import random
 
 suits = ['♣', '♦', '♥', '♠']
@@ -66,12 +66,36 @@ class Hand:
         return new_hand
 
 
+class Scoreboard:
+    def __init__(self, fileDir=os.getcwd() + "\\Scoreboard.json"):
+        self.fileDir = fileDir
+        self.scores = self.load_scores()
+
+    def add_score(self, player_name, score):
+        self.scores[player_name] = self.scores.get(player_name, 0) + score
+
+    def save_scores(self):
+
+
+    def load_scores(self):
+        try:
+            with open(self.fileDir, 'r') as file:
+                return json.load(file)
+        except FileNotFoundError:
+            file = open(self.fileDir, "x")
+            return {}
+        except json.decoder.JSONDecodeError:
+            return {}
+
+
 def blackjack():
     print("Welcome to Blackjack!")
 
     # player_name = input("What is your name? ")
 
     # print("Hello, " + player_name + "!")
+
+    scoreboard = Scoreboard()
 
     deck = Deck(2)
 
