@@ -74,8 +74,12 @@ class Scoreboard:
     def add_score(self, player_name, score):
         self.scores[player_name] = self.scores.get(player_name, 0) + score
 
-    def save_scores(self):
+    def subtract_score(self, player_name, score):
+        self.scores[player_name] = self.scores.get(player_name, 0) - score
 
+    def save_scores(self):
+        with open(self.fileDir, "w") as file:
+            json.dump(self.scores, file)
 
     def load_scores(self):
         try:
@@ -96,8 +100,12 @@ def blackjack():
     # print("Hello, " + player_name + "!")
 
     scoreboard = Scoreboard()
+    scoreboard.add_score("Gregology", 20)
+    scoreboard.add_score("Hubert", 25)
+    scoreboard.subtract_score("Gregology", 15)
+    scoreboard.save_scores()
 
-    deck = Deck(2)
+    deck = Deck(1)
 
     player_hand = Hand()
     player_hand_2 = None
@@ -114,11 +122,11 @@ def blackjack():
     active_hand = 0
 
     while True:
-        print("\nYour hand:", ' | '.join(str(card) for card in player_hand.cards),
+        print("---------------------------------------------------\nYour hand:", ' | '.join(str(card) for card in player_hand.cards),
               f"Value of hand: {player_hand.value}")
 
         if player_hand_2 is not None:
-            print("\nYour second hand:", ' | '.join(str(card) for card in player_hand_2.cards),
+            print("---------------------------------------------------\nYour second hand:", ' | '.join(str(card) for card in player_hand_2.cards),
                   f"Value of hand: {player_hand_2.value}")
 
         print("---------------------------------------------------\nDealer's hand: ", str(dealer_hand.cards[0]),
@@ -131,7 +139,10 @@ def blackjack():
             else:
                 active_hand = 1
         elif player_hand.value > 21:
-            print("You busted! Dealer wins.")
+            if player_hand_2 is None:
+                print("You busted! Dealer wins.")
+            else:
+                print("You busted on your first hand!")
             if player_hand_2 is None:
                 return
             else:
@@ -141,13 +152,19 @@ def blackjack():
             print("BLACKJACK! You win on your second hand!")
             return
         elif player_hand_2 is not None and player_hand_2.value > 21:
-            print("You busted on your second hand! Dealer wins.")
+            print("You busted on your second hand!")
             return
 
         if len(player_hand.cards) > 1 and player_hand.cards[0].rank == player_hand.cards[1].rank:
-            action = input(f"Do you want to [H]it, [S]tand or Spli[T]?").strip().lower()
+            action = input(f"Do you want to [H]it, [S]tand or Spli[T]?\t").strip().lower()
         else:
-            action = input(f"Do you want to [H]it or [S]tand?").strip().lower()
+            if player_hand_2 is None:
+                action = input(f"Do you want to [H]it or [S]tand?\t").strip().lower()
+            else:
+                if active_hand == 0:
+                    action = input(f"Do you want to [H]it or [S]tand on your first hand?\t").strip().lower()
+                elif active_hand == 1:
+                    action = input(f"Do you want to [H]it or [S]tand on your second hand?\t").strip().lower()
 
         if action == 'h':
             if active_hand == 0:
@@ -169,20 +186,35 @@ def blackjack():
         print("Dealer draws ", str(dealer_hand.cards[-1]))
         print(f"Value of dealer hand: {dealer_hand.value}")
 
-    if dealer_hand.value > 21:
-        print("Dealer busted! You win!")
-    elif dealer_hand.value > player_hand.value:
-        print("Dealer wins!")
-    elif dealer_hand.value < player_hand.value:
-        print("You win!")
-    else:
-        print("It's a tie!")
+    print("***************************************************")
+    if player_hand.value < 22:
+        if dealer_hand.value > 21:
+            print("Dealer busted! You win!")
+        elif dealer_hand.value > player_hand.value:
+            if player_hand_2 is None:
+                print("Dealer wins!")
+            else:
+                print("Dealer wins against your first hand!")
+        elif dealer_hand.value < player_hand.value:
+            if player_hand_2 is None:
+                print("You win!")
+            else:
+                print("You win on your first hand!")
+        else:
+            if player_hand_2 is None:
+                print("It's a tie!")
+            else:
+                print("It's a tie on your first hand!")
 
-    if player_hand_2 is not None:
+    print("***************************************************")
+    if player_hand_2 is not None and dealer_hand.value <= 21 and player_hand_2.value < 22:
         if dealer_hand.value < player_hand_2.value:
             print("You win on your second hand")
+            print("***************************************************")
         elif 21 >= dealer_hand.value > player_hand_2.value:
             print("Dealer win against your second hand")
+            print("***************************************************")
+
 
 
 if __name__ == "__main__":
