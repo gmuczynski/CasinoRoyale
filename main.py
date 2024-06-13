@@ -3,6 +3,7 @@
 
 from Classes.BlackJackGame import BlackJack
 
-if __name__ == "__main__":
+
+def main():
     game = BlackJack()
-    game.gameLogic()
+    game.game_logic()

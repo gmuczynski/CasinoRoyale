@@ -3,8 +3,9 @@ import os
 import random
 from .constans import suits, values
 
+
 class BlackJack:
-    def gameLogic(self):
+    def game_logic(self):
         print("Welcome to Blackjack!")
 
         from .Decks import Deck
