@@ -181,10 +181,12 @@ def blackjack():
 
     print("\nDealer's hand:", ' | '.join(str(card) for card in dealer_hand.cards),
           f"Value of dealer hand: {dealer_hand.value}")
+
     while dealer_hand.value < 17:
         dealer_hand.add_card(deck.draw_card())
         print("Dealer draws ", str(dealer_hand.cards[-1]))
-        print(f"Value of dealer hand: {dealer_hand.value}")
+        if player_hand.value <= 21 or player_hand_2.value <= 21:
+            print(f"Value of dealer hand: {dealer_hand.value}")
 
     print("***************************************************")
     if player_hand.value < 22:
