@@ -1,5 +1,5 @@
-from Classes.BlackJackGame import values
-from Classes.Cards import Card
+from .constans import values
+from .Cards import Card
 
 class Hand:
     def __init__(self):
@@ -18,7 +18,7 @@ class Hand:
     def adjust_for_ace(self):
         while self.value > 21 and self.aces:
             self.value -= 10
-            self.aces -= -1
+            self.aces -= 1
 
     def calculate_value(self):
         val = 0

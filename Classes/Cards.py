@@ -1,4 +1,4 @@
-from Classes.BlackJackGame import values
+from .constans import values
 
 class Card:
     def __init__(self, suit, value):

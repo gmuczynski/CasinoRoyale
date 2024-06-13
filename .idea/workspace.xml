@@ -4,8 +4,15 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2cb48d53-35b8-4c3a-a705-515ea959d6fc" name="Changes" comment="Jeden if dorobiony chyba nawet w zlym miejscu ale sam commit jest na probe">
+    <list default="true" id="2cb48d53-35b8-4c3a-a705-515ea959d6fc" name="Changes" comment="Kod podzielony na pliki, w klasie BlackJack jeszcze dorobie różne metody zeby bylo bardziej czytelnie">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Classes/BlackJackGame.py" beforeDir="false" afterPath="$PROJECT_DIR$/Classes/BlackJackGame.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Classes/Cards.py" beforeDir="false" afterPath="$PROJECT_DIR$/Classes/Cards.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Classes/Decks.py" beforeDir="false" afterPath="$PROJECT_DIR$/Classes/Decks.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Classes/Hands.py" beforeDir="false" afterPath="$PROJECT_DIR$/Classes/Hands.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Classes/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/Classes/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Classes/constans.py" beforeDir="false" afterPath="$PROJECT_DIR$/Classes/constans.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Scoreboard.json" beforeDir="false" afterPath="$PROJECT_DIR$/Scoreboard.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -90,7 +97,7 @@
       <workItem from="1716759687777" duration="432000" />
       <workItem from="1718286560104" duration="19000" />
       <workItem from="1718286593847" duration="219000" />
-      <workItem from="1718286821554" duration="8104000" />
+      <workItem from="1718286821554" duration="9220000" />
     </task>
     <task id="LOCAL-00001" summary="Jeden if dorobiony chyba nawet w zlym miejscu ale sam commit jest na probe">
       <option name="closed" value="true" />
@@ -100,7 +107,15 @@
       <option name="project" value="LOCAL" />
       <updated>1718291266515</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Kod podzielony na pliki, w klasie BlackJack jeszcze dorobie różne metody zeby bylo bardziej czytelnie">
+      <option name="closed" value="true" />
+      <created>1718297374195</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1718297374195</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -108,15 +123,16 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Jeden if dorobiony chyba nawet w zlym miejscu ale sam commit jest na probe" />
-    <option name="LAST_COMMIT_MESSAGE" value="Jeden if dorobiony chyba nawet w zlym miejscu ale sam commit jest na probe" />
+    <MESSAGE value="Kod podzielony na pliki, w klasie BlackJack jeszcze dorobie różne metody zeby bylo bardziej czytelnie" />
+    <option name="LAST_COMMIT_MESSAGE" value="Kod podzielony na pliki, w klasie BlackJack jeszcze dorobie różne metody zeby bylo bardziej czytelnie" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/Python$BlackJack.coverage" NAME="BlackJack Coverage Results" MODIFIED="1718293017401" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Classes" />
     <SUITE FILE_PATH="coverage/Python$constans.coverage" NAME="constans Coverage Results" MODIFIED="1718296793735" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Classes" />
-    <SUITE FILE_PATH="coverage/Python$BlackJackGame.coverage" NAME="BlackJackGame Coverage Results" MODIFIED="1718297114949" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Classes" />
+    <SUITE FILE_PATH="coverage/Python$BlackJackGame.coverage" NAME="BlackJackGame Coverage Results" MODIFIED="1718297712172" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Classes" />
     <SUITE FILE_PATH="coverage/Python$Deck.coverage" NAME="Deck Coverage Results" MODIFIED="1718291909718" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/Python$ScoreboardOperating.coverage" NAME="ScoreboardOperating Coverage Results" MODIFIED="1718296872436" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Classes" />
-    <SUITE FILE_PATH="coverage/Python$main.coverage" NAME="main Coverage Results" MODIFIED="1718296173839" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/Python$ScoreboardOperating.coverage" NAME="ScoreboardOperating Coverage Results" MODIFIED="1718298305631" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Classes" />
+    <SUITE FILE_PATH="coverage/Python$main.coverage" NAME="main Coverage Results" MODIFIED="1718298357996" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/Python$Hand.coverage" NAME="Hand Coverage Results" MODIFIED="1718292112032" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/Python$Cards.coverage" NAME="Cards Coverage Results" MODIFIED="1718296442916" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Classes" />
   </component>
