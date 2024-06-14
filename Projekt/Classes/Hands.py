@@ -1,3 +1,4 @@
+# Classes/Hands.py
 from .constans import values
 from .Cards import Card
 

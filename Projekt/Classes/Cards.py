@@ -1,3 +1,4 @@
+# Classes/Cards.py
 from .constans import values
 
 class Card:

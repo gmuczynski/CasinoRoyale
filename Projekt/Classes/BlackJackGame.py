@@ -1,11 +1,10 @@
-import json
-import os
+# Classes/BlackJackGame.py
 import random
 from .constans import suits, values
-
+from .Bets import Bet
 
 class BlackJack:
-    def game_logic(self):
+    def gameLogic(self):
         print("Welcome to Blackjack!")
 
         from .Decks import Deck
@@ -18,11 +17,23 @@ class BlackJack:
         scoreboard.subtract_score("Gregology", 15)
         scoreboard.save_scores()
 
+        print("Scoreboard initialized and scores updated.")  # Debugging print
+
         deck = Deck(1)
+        print("Deck created.")  # Debugging print
 
         player_hand = Hand()
         player_hand_2 = None
         dealer_hand = Hand()
+
+        # Initialize the Bet class with a starting amount of money
+        bet = Bet(1000)  # Initialize with 1000 units of money
+        print("Initial total money written to file.")
+
+        # Ask the player for a bet amount
+        bet_amount = int(input("Enter your bet amount: "))
+        bet.place_bet(bet_amount)  # Place the bet
+        print("Bet placed and file updated.")
 
         for _ in range(2):
             player_hand.add_card(deck.draw_card())
@@ -49,10 +60,8 @@ class BlackJack:
 
             if player_hand.value == 21:
                 print("BLACKJACK! You win!")
-                if player_hand_2 is None:
-                    return
-                else:
-                    active_hand = 1
+                bet.add_winnings(bet_amount * 2)  # Add winnings
+                return
             elif player_hand.value > 21:
                 if player_hand_2 is None:
                     print("You busted! Dealer wins.")
@@ -63,6 +72,7 @@ class BlackJack:
 
             if player_hand_2 is not None and player_hand_2.value == 21:
                 print("BLACKJACK! You win on your second hand!")
+                bet.add_winnings(bet_amount * 2)  # Add winnings
                 return
             elif player_hand_2 is not None and player_hand_2.value > 21:
                 print("You busted on your second hand!")
@@ -104,6 +114,7 @@ class BlackJack:
         if player_hand.value < 22:
             if dealer_hand.value > 21:
                 print("Dealer busted! You win!")
+                bet.add_winnings(bet_amount * 2)  # Add winnings
             elif dealer_hand.value > player_hand.value:
                 if player_hand_2 is None:
                     print("Dealer wins!")
@@ -112,8 +123,10 @@ class BlackJack:
             elif dealer_hand.value < player_hand.value:
                 if player_hand_2 is None:
                     print("You win!")
+                    bet.add_winnings(bet_amount * 2)  # Add winnings
                 else:
                     print("You win on your first hand!")
+                    bet.add_winnings(bet_amount * 2)  # Add winnings
             else:
                 if player_hand_2 is None:
                     print("It's a tie!")
@@ -124,6 +137,7 @@ class BlackJack:
         if player_hand_2 is not None and dealer_hand.value <= 21 and player_hand_2.value < 22:
             if dealer_hand.value < player_hand_2.value:
                 print("You win on your second hand")
+                bet.add_winnings(bet_amount * 2)  # Add winnings
                 print("***************************************************")
             elif 21 >= dealer_hand.value > player_hand_2.value:
                 print("Dealer win against your second hand")

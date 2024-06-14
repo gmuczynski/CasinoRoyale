@@ -4,63 +4,61 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2cb48d53-35b8-4c3a-a705-515ea959d6fc" name="Changes" comment="Naprawione importy">
+    <list default="true" id="4dfaf3e8-9a4a-4143-a29f-e6ea919495b4" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/CasinoRoyale.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/profiles_settings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/profiles_settings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Classes/BlackJackGame.py" beforeDir="false" afterPath="$PROJECT_DIR$/Classes/BlackJackGame.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Classes/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/Classes/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Classes/Bets.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Classes/BlackJackGame.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Classes/Cards.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Classes/Decks.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Classes/Hands.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Classes/ScoreboardOperating.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Classes/__init__.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Classes/constans.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Scoreboard.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bet.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="FileTemplateManagerImpl">
-    <option name="RECENT_TEMPLATES">
-      <list>
-        <option value="Python Script" />
-      </list>
-    </option>
-  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
-  "lastFilter": {
-    "state": "OPEN",
-    "assignee": "HubertMosakowski"
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;HubertMosakowski&quot;
   }
-}]]></component>
-  <component name="GithubPullRequestsUISettings"><![CDATA[{
-  "selectedUrlAndAccountId": {
-    "url": "https://github.com/gmuczynski/CasinoRoyale.git",
-    "accountId": "fe4ecedc-f589-4b24-8fc0-ba00a8efc123"
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/gmuczynski/CasinoRoyale.git&quot;,
+    &quot;accountId&quot;: &quot;fe4ecedc-f589-4b24-8fc0-ba00a8efc123&quot;
   }
-}]]></component>
+}</component>
   <component name="ProjectColorInfo">{
+  &quot;customColor&quot;: &quot;&quot;,
   &quot;associatedIndex&quot;: 6
 }</component>
-  <component name="ProjectId" id="2h1Rdd5kxoOf31aLegfqGj75xEz" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
-    <ConfirmationsSetting value="1" id="Add" />
-  </component>
+  <component name="ProjectId" id="2hqG0ecP0Rgo9GXS3wwebUb5n2i" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
-    "Python.Bets.executor": "Run",
-    "Python.BlackJack.executor": "Run",
     "Python.BlackJackGame.executor": "Run",
-    "Python.Cards.executor": "Run",
-    "Python.Deck.executor": "Run",
-    "Python.Hand.executor": "Run",
-    "Python.ScoreboardOperating.executor": "Run",
-    "Python.constans.executor": "Run",
+    "Python.__init__.executor": "Run",
     "Python.main.executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "git-widget-placeholder": "master",
+    "last_opened_file_path": "C:/Users/Huber/Desktop/PJATK/Python/Projekt",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -69,11 +67,6 @@
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
-  <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\Users\Huber\Desktop\PJATK\Python\Classes" />
-    </key>
-  </component>
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
@@ -85,61 +78,22 @@
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="2cb48d53-35b8-4c3a-a705-515ea959d6fc" name="Changes" comment="" />
-      <created>1716759686314</created>
+      <changelist id="4dfaf3e8-9a4a-4143-a29f-e6ea919495b4" name="Changes" comment="" />
+      <created>1718313977186</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1716759686314</updated>
-      <workItem from="1716759687777" duration="432000" />
-      <workItem from="1718286560104" duration="19000" />
-      <workItem from="1718286593847" duration="219000" />
-      <workItem from="1718286821554" duration="13652000" />
+      <updated>1718313977186</updated>
+      <workItem from="1718313979826" duration="179000" />
+      <workItem from="1718369981307" duration="2181000" />
     </task>
-    <task id="LOCAL-00001" summary="Jeden if dorobiony chyba nawet w zlym miejscu ale sam commit jest na probe">
-      <option name="closed" value="true" />
-      <created>1718291266515</created>
-      <option name="number" value="00001" />
-      <option name="presentableId" value="LOCAL-00001" />
-      <option name="project" value="LOCAL" />
-      <updated>1718291266515</updated>
-    </task>
-    <task id="LOCAL-00002" summary="Kod podzielony na pliki, w klasie BlackJack jeszcze dorobie różne metody zeby bylo bardziej czytelnie">
-      <option name="closed" value="true" />
-      <created>1718297374195</created>
-      <option name="number" value="00002" />
-      <option name="presentableId" value="LOCAL-00002" />
-      <option name="project" value="LOCAL" />
-      <updated>1718297374195</updated>
-    </task>
-    <task id="LOCAL-00003" summary="Naprawione importy">
-      <option name="closed" value="true" />
-      <created>1718298416229</created>
-      <option name="number" value="00003" />
-      <option name="presentableId" value="LOCAL-00003" />
-      <option name="project" value="LOCAL" />
-      <updated>1718298416229</updated>
-    </task>
-    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
-  <component name="VcsManagerConfiguration">
-    <MESSAGE value="Jeden if dorobiony chyba nawet w zlym miejscu ale sam commit jest na probe" />
-    <MESSAGE value="Kod podzielony na pliki, w klasie BlackJack jeszcze dorobie różne metody zeby bylo bardziej czytelnie" />
-    <MESSAGE value="Naprawione importy" />
-    <option name="LAST_COMMIT_MESSAGE" value="Naprawione importy" />
-  </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/Python$BlackJack.coverage" NAME="BlackJack Coverage Results" MODIFIED="1718293017401" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Classes" />
-    <SUITE FILE_PATH="coverage/Python$constans.coverage" NAME="constans Coverage Results" MODIFIED="1718296793735" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Classes" />
-    <SUITE FILE_PATH="coverage/Python$BlackJackGame.coverage" NAME="BlackJackGame Coverage Results" MODIFIED="1718302205204" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Classes" />
-    <SUITE FILE_PATH="coverage/Python$Bets.coverage" NAME="Bets Coverage Results" MODIFIED="1718302601992" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Classes" />
-    <SUITE FILE_PATH="coverage/Python$Deck.coverage" NAME="Deck Coverage Results" MODIFIED="1718291909718" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/Python$ScoreboardOperating.coverage" NAME="ScoreboardOperating Coverage Results" MODIFIED="1718298305631" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Classes" />
-    <SUITE FILE_PATH="coverage/Python$main.coverage" NAME="main Coverage Results" MODIFIED="1718302331029" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/Python$Hand.coverage" NAME="Hand Coverage Results" MODIFIED="1718292112032" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/Python$Cards.coverage" NAME="Cards Coverage Results" MODIFIED="1718296442916" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Classes" />
+    <SUITE FILE_PATH="coverage/Python$BlackJackGame.coverage" NAME="BlackJackGame Coverage Results" MODIFIED="1718373363693" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Projekt/Classes" />
+    <SUITE FILE_PATH="coverage/Python$main.coverage" NAME="main Coverage Results" MODIFIED="1718373354675" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Projekt" />
+    <SUITE FILE_PATH="coverage/Python$__init__.coverage" NAME="__init__ Coverage Results" MODIFIED="1718373408976" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Projekt/Classes" />
   </component>
 </project>
