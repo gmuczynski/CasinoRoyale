@@ -10,15 +10,12 @@ class BlackJack:
 
         win = False
 
-        name = input("Enter your name: ")
+        name = input("Enter your name or create new profile: ")
 
         scoreboard = Scoreboard()
 
         scoreboard.add_player(name)
-
         scoreboard.save_scores()
-
-        print("Scoreboard initialized and scores updated.")  # Debugging print
 
         deck = Deck(1)
 
@@ -30,7 +27,6 @@ class BlackJack:
         bet_amount = int(input("Enter your bet amount: "))
         scoreboard.subtract_score(name, bet_amount)
         scoreboard.save_scores()
-        print("Bet placed and file updated.")
 
         for _ in range(2):
             player_hand.add_card(deck.draw_card())
@@ -75,7 +71,7 @@ class BlackJack:
                 print("You busted on your second hand!")
                 return
 
-            if len(player_hand.cards) > 1 and player_hand.cards[0].rank == player_hand.cards[1].rank:
+            if len(player_hand.cards) > 1 and player_hand.cards[0].rank == player_hand.cards[1].rank and player_hand_2 is None:
                 action = input(f"Do you want to [H]it, [S]tand or Spli[T]?\t").strip().lower()
             else:
                 if player_hand_2 is None:
@@ -86,21 +82,20 @@ class BlackJack:
                     elif active_hand == 1:
                         action = input(f"Do you want to [H]it or [S]tand on your second hand?\t").strip().lower()
 
-            first_round = 0
 
             if action == 'h':
                 if active_hand == 0:
                     player_hand.add_card(deck.draw_card())
                 elif player_hand_2 is not None:
                     player_hand_2.add_card(deck.draw_card())
-            elif action == 't' and first_round == 0:
+            elif (action == 't' and len(player_hand.cards) > 1 and
+                  player_hand.cards[0].rank == player_hand.cards[1].rank and player_hand_2 is None):
                 player_hand_2 = player_hand.split_hand()
             elif action == 's':
                 if player_hand_2 is not None and active_hand == 0:
                     active_hand = 1
                 else:
                     break
-            first_round = 1
 
         print("\nDealer's hand:", ' | '.join(str(card) for card in dealer_hand.cards),
               f"Value of dealer hand: {dealer_hand.value}")
@@ -130,6 +125,8 @@ class BlackJack:
             else:
                 if player_hand_2 is None:
                     print("It's a tie!")
+                    scoreboard.add_score(name, bet_amount)
+                    scoreboard.save_scores()
                 else:
                     print("It's a tie on your first hand!")
 

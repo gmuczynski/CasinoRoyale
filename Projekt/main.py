@@ -1,7 +1,6 @@
 # Author 1: Grzegorz Muczyński (s27971)
 # Author 2: Hubert Mosakowski (s28829)
 
-import sys
 
 from Classes.BlackJackGame import BlackJack
 

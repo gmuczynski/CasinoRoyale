@@ -1,6 +1,6 @@
 # Classes/Hands.py
 from .constants import values
-from .Cards import Card
+
 
 class Hand:
     def __init__(self):
@@ -36,3 +36,4 @@ class Hand:
         self.cards.remove(self.cards[1])
         self.calculate_value()
         return new_hand
+

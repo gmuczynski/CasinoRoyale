@@ -27,13 +27,16 @@ class Scoreboard:
 
     def add_player(self, player_name):
         if self.check_player(player_name):
-            print(f"Witamy ponownie {player_name}!")
+            print(f"Welcome back {player_name}!")
         else:
-            print(f"Witaj {player_name}, na start dostajesz 1000 kredytów!")
+            print(f"Welcome {player_name}, here are your 1000 starting credits!")
             self.scores[player_name] = self.scores.get(player_name, 0) + 1000
 
     def subtract_score(self, player_name, score):
-        self.scores[player_name] = self.scores.get(player_name, 0) - score
+        if self.scores.get(player_name, 0) - score < 0:
+            raise ValueError(f"You dont have enough credits!")
+        else:
+            self.scores[player_name] = self.scores.get(player_name, 0) - score
 
     def save_scores(self):
         with open(self.fileDir, "w") as file:

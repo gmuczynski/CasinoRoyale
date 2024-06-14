@@ -1,5 +1,3 @@
-import os
-
 class Bet:
     def __init__(self, initial_amount, file_path='bet.txt'):
         self.total_money = initial_amount
