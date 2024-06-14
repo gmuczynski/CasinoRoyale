@@ -1,7 +1,7 @@
 # Classes/Decks.py
 from random import shuffle
 from .Cards import Card
-from .constans import suits, values
+from .constants import suits, values
 
 class Deck:
     def __init__(self, number_of_decks):

@@ -1,5 +1,5 @@
 # Classes/Cards.py
-from .constans import values
+from .constants import values
 
 class Card:
     def __init__(self, suit, value):

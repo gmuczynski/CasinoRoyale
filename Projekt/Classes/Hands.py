@@ -1,5 +1,5 @@
 # Classes/Hands.py
-from .constans import values
+from .constants import values
 from .Cards import Card
 
 class Hand:

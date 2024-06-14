@@ -5,10 +5,32 @@ import os
 class Scoreboard:
     def __init__(self, fileDir=os.getcwd() + "\\Scoreboard.json"):
         self.fileDir = fileDir
-        self.scores = self.load_scores()
+        self.scores = self.load_scoreboard()
+
+    def check_player(self, player_name):
+        with open(self.fileDir, 'r') as file:
+            data = json.load(file)
+
+        if isinstance(data, dict):
+            for key, value in data.items():
+                if isinstance(key, list):
+                    for item in key:
+                        if player_name in json.dumps(item):
+                            return item
+                elif player_name in json.dumps(key):
+                    return True
+        else:
+            return False
 
     def add_score(self, player_name, score):
         self.scores[player_name] = self.scores.get(player_name, 0) + score
+
+    def add_player(self, player_name):
+        if self.check_player(player_name):
+            print(f"Witamy ponownie {player_name}!")
+        else:
+            print(f"Witaj {player_name}, na start dostajesz 1000 kredytów!")
+            self.scores[player_name] = self.scores.get(player_name, 0) + 1000
 
     def subtract_score(self, player_name, score):
         self.scores[player_name] = self.scores.get(player_name, 0) - score
@@ -17,7 +39,11 @@ class Scoreboard:
         with open(self.fileDir, "w") as file:
             json.dump(self.scores, file)
 
-    def load_scores(self):
+    def get_scores(self, player_name):
+        total_credit = self.scores.get(player_name, 0)
+        return total_credit
+
+    def load_scoreboard(self):
         try:
             with open(self.fileDir, 'r') as file:
                 return json.load(file)
