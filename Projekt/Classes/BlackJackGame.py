@@ -3,7 +3,23 @@ from .Hands import Hand
 from .ScoreboardOperating import Scoreboard
 
 
+class BlackJack:
+    """
+    Klasa która zawiera w sobie logikę gry, cały przebieg rozgrywki dzieje się tutaj
+    """
+    pass
+
+
 def game_logic():
+    """
+    Metoda zawierająca całą logikę gry
+
+    Parametry:
+    brak
+
+    Zwraca:
+    brak
+    """
     print("Welcome to Blackjack!")
     name = input("Enter your name or create new profile: ")
 
@@ -163,5 +179,3 @@ def add_won_credits(bet_amount, name, reward_multiplier, scoreboard):
     scoreboard.save_scores()
 
 
-class BlackJack:
-    pass

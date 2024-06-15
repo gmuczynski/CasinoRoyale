@@ -4,6 +4,9 @@
 
 from Classes.BlackJackGame import BlackJack, game_logic
 
+"""
+Klasa main w której wywoływany jest cały program
+"""
 if __name__ == "__main__":
     game = BlackJack()
     game_logic()
