@@ -10,7 +10,6 @@ class Scoreboard:
     def check_player(self, player_name):
         with open(self.fileDir, 'r') as file:
             data = json.load(file)
-
         if isinstance(data, dict):
             for key, value in data.items():
                 if isinstance(key, list):
@@ -30,7 +29,7 @@ class Scoreboard:
             print(f"Welcome back {player_name}!")
         else:
             print(f"Welcome {player_name}, here are your 1000 starting credits!")
-            self.scores[player_name] = self.scores.get(player_name, 0) + 1000
+            self.scores[player_name] = self.scores.get(player_name, 0) + 1000.0
 
     def subtract_score(self, player_name, score):
         if self.scores.get(player_name, 0) - score < 0:
