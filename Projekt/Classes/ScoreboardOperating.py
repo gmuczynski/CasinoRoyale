@@ -32,8 +32,8 @@ class Scoreboard:
             self.scores[player_name] = self.scores.get(player_name, 0) + 1000.0
 
     def subtract_score(self, player_name, score):
-        if self.scores.get(player_name, 0) - score < 0:
-            raise ValueError(f"You dont have enough credits!")
+        if self.scores.get(player_name, 0) - score < 0 or score < 0:
+            raise ValueError(f"You dont have enough credits or you tried to bet negative number!")
         else:
             self.scores[player_name] = self.scores.get(player_name, 0) - score
 
